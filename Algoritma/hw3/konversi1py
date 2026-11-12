@@ -1,0 +1,35 @@
+kuis = [
+    # soal-soal kuis
+    {
+        "soal": "1. Presiden Indonesia sekarang adalah Prabowo?",
+        "jawaban": "Benar"
+    },
+    {
+        "soal": "2. Ibukota Indonesia adalah Bandung?",
+        "jawaban": "Salah"
+    },
+    {
+        "soal": "3. Bahasa resmi Indonesia adalah Bahasa Indonesia!",
+        "jawaban": "Benar"
+    }
+]
+
+# 1. atur nyawa ke 3, atur skor ke 0
+nyawa = 3
+skor = 0
+
+# 2. ulangi 3 kali (perulangan)
+for i in range(3):
+    # 3. tanya ... dan tunggu
+    jawaban = input(kuis[i]["soal"] + " ").lower()
+    # 4. jika ... jika tidak
+    if jawaban == kuis[i]["jawaban"].lower():
+        skor += 20
+        # 5. katakan (output)
+        print("Jawaban kamu benar!")
+    else:
+        skor -= 30
+        nyawa -= 1
+        print("Jawaban kamu salah!")
+
+print("Skor kamu: ", skor)
